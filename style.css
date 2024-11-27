@@ -1,0 +1,327 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #ffea99;
+    color: #333;
+    min-height: 100vh;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background:#ffde21;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: #e0bc00;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+  }
+  
+  .navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+  }
+  
+  .navbar ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .navbar ul li a:hover {
+    text-decoration: none;
+    color: #ffffff;
+
+  }
+  
+  .menu-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .main-content {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+  }
+  
+  .form-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .input-section, .output-section {
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  textarea, input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+    height: 130px;
+  }
+  
+  textarea[readonly] {
+    background-color: #ffffff;
+    height: 274px;
+  }
+  
+  p {
+    text-align: left;
+  }
+  
+  
+  .btn{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    gap: 10px;
+  } 
+  .btn1{
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    /* position: relative; */
+  }
+
+  .humanize {
+    font-size: larger;
+    font-weight: bolder;
+    background-color: #b9a22e;
+  }
+  
+  .clear {
+    font-size: larger;
+    font-weight: bolder;
+    background-color: #e0bc00;
+  }
+  
+  .edit {
+    font-size: larger;
+    font-weight: bolder;
+    background-color: #e0bc00;
+  }
+  
+  .copy {
+    font-size: larger;
+    font-weight: bolder;
+    background-color: #b9a22e;
+  }
+  
+  .navigation-buttons .btn {
+    background-color: #ccc;
+    margin: 10px;
+  }
+  
+  
+  .footer-stats {
+    margin-left: 0;
+    text-align: center;
+    background-color: #ffde21;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: larger;
+    font-weight: bolder;
+    
+  }
+  .btn13{
+    position: relative;
+  }
+  
+  
+  @media (max-width: 768px) {
+    .navbar ul {
+      flex-direction: column;
+      display: none;
+    }
+    .navbar ul.show{
+      display: flex;
+    }
+    .menu-toggle {
+      display: block;
+    }
+    .form-container {
+      flex-direction: column;
+      align-items: center;
+    } 
+    
+    .footer-stats {
+      margin-left: 0;
+      text-align: center;
+      background-color:#ffde21;
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+
+      
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .navbar ul {
+      flex-direction: row;
+      display: none;
+    }
+    .navbar ul.show{
+      display: flex;
+    }
+    .menu-toggle {
+      display: block;
+    }
+    .form-container {
+      flex-direction: row;
+      justify-content: space-between;
+      
+    }
+  
+    .input-section {
+      width: 60%;
+      height: 20rem;
+    }
+  
+    textarea, input {
+      height: 100px;
+    }
+  
+    .footer-stats {
+      margin-left: 0;
+      text-align: center;
+      background-color:#ffde21;
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      
+      
+    }
+    .output-section{
+      height: 20rem;
+      margin-left: 25rem;
+    }
+    .btn12{
+      display: flex;
+      flex-direction: column;
+      width: 30%;
+      gap: 60px;
+      margin-left: 38rem;
+      position: relative;
+      bottom: 12rem;
+    }
+    .btn13{
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      width: 20%;
+      gap: 60px;
+      position: absolute;
+      right: 40rem; 
+      bottom:-6rem;
+    }
+
+  }
+  
+  @media (min-width: 1024px) {
+    .navbar ul {
+        display: flex;
+        justify-content: flex-end;
+        gap: 30px;
+    }
+
+    .form-container {
+        display: flex;
+        gap: 30px;
+        justify-content: space-between;
+    }
+
+    .input-section {
+        width: 45%;
+    }
+
+    .output-section textarea{
+      height: 19.6rem;
+    }
+
+    textarea, input {
+        height: 150px; 
+    }
+
+    .btn12, .btn13 {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        gap: 20px;
+    }
+
+    .footer-stats {
+        font-size: 1.2rem; 
+        margin-top: 20px;
+    }
+
+    .navigation-buttons .btn {
+        padding: 10px 15px;
+    }
+
+    .header {
+        padding: 20px 30px;
+    }
+
+    .logo h1 {
+        font-size: 2rem;
+    }
+
+    .main-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .btn {
+        font-size: 1rem; 
+    }
+}
+
+    
+
+
+
+   
+
+      
+  
