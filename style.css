@@ -11,15 +11,15 @@
     min-height: 100vh;
   }
   
+  
   .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
+    /* padding: 20px; */
     background:#ffde21;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
-  
 
   .header {
     display: flex;
@@ -27,6 +27,8 @@
     align-items: center;
     padding: 15px 20px;
     background: #e0bc00;
+    /* background-color: aliceblue; */
+    margin-right: 4.5rem;
   }
   
   .logo {
@@ -40,22 +42,27 @@
     margin-right: 10px;
   }
   
-  .navbar ul {
+  
+  .ham ul {
     display: flex;
     list-style: none;
     gap: 20px;
   }
   
-  .navbar ul li a {
+  .ham ul li a {
     text-decoration: none;
     color: #333;
     font-weight: bold;
+    font-size: larger;
   }
   
-  .navbar ul li a:hover {
+  .ham ul li a:hover {
     text-decoration: none;
     color: #ffffff;
 
+  }
+  .ham{
+    position: relative;
   }
   
   .menu-toggle {
@@ -73,6 +80,8 @@
   
   h2 {
     margin-bottom: 20px;
+    /* background-color: aliceblue; */
+    margin-right: 10rem;
   }
   
   .form-container {
@@ -170,53 +179,106 @@
   
   
   @media (max-width: 768px) {
-    .navbar ul {
+    .ham ul {
       flex-direction: column;
       display: none;
+      border-radius: 5px;
+      margin-right: 0rem;
+      background-color: #e0bc00;
+      width: 100%;
     }
-    .navbar ul.show{
+    .ham ul.show{
       display: flex;
+      
     }
+    body{
+      width: 100%;
+    }
+    .header{
+      margin-right: 0rem;
+    }
+    h2{
+      margin-left: 2.8rem;
+      width: 70%;
+     }
+    
     .menu-toggle {
       display: block;
+      margin-right: 20px;
     }
+    .ham ul li a{
+      padding: 10px;
+      margin: 15rem;
+      padding-left: 40px;
+      font-size: larger;
+      font-weight: bolder;
+   }
+    h1{
+      font-size: x-large;
+    }
+
     .form-container {
       flex-direction: column;
       align-items: center;
     } 
     
+    
     .footer-stats {
       margin-left: 0;
       text-align: center;
       background-color:#ffde21;
-      width: 100%;
+      width: 80%;
       padding: 10px;
       border-radius: 5px;
-
       
     }
+    
   }
 
   @media (min-width: 768px) and (max-width: 1024px) {
-    .navbar ul {
+    .ham ul {
       flex-direction: row;
       display: none;
-    }
-    .navbar ul.show{
+      /* float: right; */
+      background-color: #e0bc00;
+      border-radius: 5px;
+      font-size: larger;
+      padding: 10px;
+      margin-right: 4.5rem;
+      padding: 30px;
+      margin-left: 0rem;
+      width: 100%;
+  }
+    .ham ul.show{
       display: flex;
+      padding-left: 30rem;
     }
+    .ham ul li a{
+      padding: 5px;
+      font-size: larger;
+      font-weight: bolder;
+   }
+   .ham ul{
+    margin-right: 0rem;
+   }
+    
     .menu-toggle {
       display: block;
     }
+    .header{
+      margin-right: 0rem;
+    }
     .form-container {
-      flex-direction: row;
+      flex-direction: column;
       justify-content: space-between;
-      
+      margin-right: 5rem;
+      /* background-color: aliceblue; */
     }
   
     .input-section {
-      width: 60%;
+      width: 80%;
       height: 20rem;
+      height: 15rem;
     }
   
     textarea, input {
@@ -230,12 +292,10 @@
       width: 100%;
       padding: 10px;
       border-radius: 5px;
-      
-      
+      width: 80%;
     }
     .output-section{
       height: 20rem;
-      margin-left: 25rem;
     }
     .btn12{
       display: flex;
@@ -245,25 +305,33 @@
       margin-left: 38rem;
       position: relative;
       bottom: 12rem;
+      
     }
     .btn13{
-      padding: 30px;
       display: flex;
       flex-direction: column;
       width: 20%;
       gap: 60px;
-      position: absolute;
-      right: 40rem; 
-      bottom:-6rem;
+      position: relative;
+      left: 39rem;
+      bottom:15rem;
     }
 
   }
   
   @media (min-width: 1024px) {
-    .navbar ul {
+    .ham ul {
         display: flex;
         justify-content: flex-end;
         gap: 30px;
+        max-width: 100%;
+        margin-right: 50px;
+    }
+    .ham{
+      position: absolute;
+      top: 40px;
+      right: 10rem;
+      
     }
 
     .form-container {
@@ -302,6 +370,7 @@
 
     .header {
         padding: 20px 30px;
+        margin-right: 0px;
     }
 
     .logo h1 {
